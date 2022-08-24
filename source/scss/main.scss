@@ -26,27 +26,71 @@ main.main {
   section.container {
     width: inherit;
     height: inherit;
-    background: silver;
+    background: lightgrey;
     display: grid;
     grid-template-columns: auto $small $large $small $small $small $large $small $small $small $large $small $small $small $large $small $small $small $large $small auto;
-    grid-template-rows: auto $medium $small $large $small $medium auto;
+    grid-template-rows: auto $medium $small $small $small $small $small $medium auto;
 
+    .item {
+      background: red;
+    }
+
+    /* number index 1 */
+    .number-1.item.index-1 {
+      grid-area: 3 / 2 / span 1 / span 2;
+    }
+    .number-1.item.index-2 {
+      grid-area: 4 / 4 / span 4 / span 1;
+    }
+    
+    /* number index 2 */
+    .number-2.item.index-1 {
+      grid-area: 3 / 6 / span 1 / span 2;
+    }
+    .number-2.item.index-2 {
+      grid-area: 4 / 8 / span 3 / span 1;
+    }
+    .number-2.item.index-3 {
+      grid-area: 7 / 6 / span 1 / span 2;
+    }
+    
     /* colon */
     .colon.item.index-1 {
-      background: black;
       grid-area: 3 / 10 / span 1 / span 1;
     }
     .colon.item.index-2 {
-      background: black;
       grid-area: 3 / 12 / span 1 / span 1;
     }
     .colon.item.index-3 {
-      background: black;
-      grid-area: 5 / 10 / span 1 / span 1;
+      grid-area: 7 / 10 / span 1 / span 1;
     }
     .colon.item.index-4 {
-      background: black;
-      grid-area: 5 / 12 / span 1 / span 1;
+      grid-area: 7 / 12 / span 1 / span 1;
+    }
+    
+    /* number index 3 */
+    .number-3.item.index-1 {
+      grid-area: 3 / 14 / span 1 / span 2;
+    }
+    .number-3.item.index-2 {
+      grid-area: 5 / 14 / span 1 / span 2;
+    }
+    .number-3.item.index-3 {
+      grid-area: 7 / 14 / span 1 / span 2;
+    }
+    .number-3.item.index-4 {
+      grid-area: 4 / 16 / span 3 / span 1;
+    }
+
+    /* number index 4 */
+    .number-4.item.index-1 {
+      grid-area: 3 / 18 / span 4 / span 1;
+    }
+    .number-4.item.index-2 {
+      grid-area: 7 / 19 / span 1 / span 1;
+    }
+    .number-4.item.index-3 {
+      grid-area: 8 / 20 / span 1 / span 1;
     }
   }
 }
