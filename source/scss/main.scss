@@ -28,69 +28,203 @@ main.main {
     height: inherit;
     background: lightgrey;
     display: grid;
-    grid-template-columns: auto $small $large $small $small $small $large $small $small $small $large $small $small $small $large $small $small $small $large $small auto;
-    grid-template-rows: auto $medium $small $small $small $small $small $medium auto;
+    grid-template-columns: auto $space $small $space $small $space $small $space $small $space auto;
+    grid-template-rows: auto $medium $space $medium auto;
 
-    .item {
-      background: red;
+    .number {
+      display: grid;
+      grid-template-columns: $small $large $small;
+      grid-template-rows: $medium repeat(5, $small) $medium;  
+
+      &.index-1 {
+        grid-area: 2 / 2 / span 4 / span 1;
+      }
+      &.index-2 {
+        grid-area: 2 / 4 / span 4 / span 1;
+      }
+      &.index-3 {
+        grid-area: 2 / 8 / span 4 / span 1;
+      }
+      &.index-4 {
+        grid-area: 2 / 10 / span 4 / span 1;
+      }
+
+      .null {
+        visibility: visible;
+        background: $color;
+
+        &.item-1 {
+          grid-area: 2 / 2 / 3 / 3;
+        }
+        &.item-2 {
+          grid-area: 3 / 1 / 6 / 2;
+        }
+        &.item-3 {
+          grid-area: 3 / 3 / 6 / 4;
+        }
+        &.item-4 {
+          grid-area: 6 / 2 / 7 / 3;
+        }
+      }
+
+      .one {
+        visibility: hidden;
+        background: $color;
+
+        &.item-1 {
+          grid-area: 2 / 1 / 3 / 3;
+        }
+        &.item-2 {
+          grid-area: 3 / 3 / 7 / 4;
+        }
+      }
+
+      .two {
+        visibility: hidden;
+        background: $color;
+
+        &.item-1 {
+          grid-area: 2 / 1 / 3 / 3;
+        }
+        &.item-2 {
+          grid-area: 3 / 3 / 6 / 4;
+        }
+        &.item-3 {
+          grid-area: 6 / 1 / 7 / 3;
+        }
+      }
+
+      .three {
+        visibility: hidden;
+        background: $color;
+
+        &.item-1 {
+          grid-area: 2 / 1 / 3 / 3;
+        }
+        &.item-2 {
+          grid-area: 4 / 1 / 5 / 3;
+        }
+        &.item-3 {
+          grid-area: 6 / 1 / 7 / 3;
+        }
+        &.item-4 {
+          grid-area: 3 / 3 / 6 / 4;
+        }
+      }
+
+      .four {
+        visibility: hidden;
+        background: $color;
+
+        &.item-1 {
+          grid-area: 2 / 1 / 6 / 2;
+        }
+        &.item-2 {
+          grid-area: 6 / 2 / 7 / 3;
+        }
+        &.item-3 {
+          grid-area: 7 / 3 / 8 / 4;
+        }
+      }
+
+      .five {
+        visibility: hidden;
+        background: $color;
+
+        &.item-1 {
+          grid-area: 2 / 2 / 3 / 4;
+        }
+        &.item-2 {
+          grid-area: 3 / 1 / 6 / 2;
+        }
+        &.item-3 {
+          grid-area: 6 / 2 / 7 / 3;
+        }
+        &.item-4 {
+          grid-area: 7 / 3 / 8 / 4;
+        }
+      }
+
+      .six {
+        visibility: hidden;
+        background: $color;
+
+        &.item-1 {
+          grid-area: 1 / 1 / 6 / 2;
+        }
+        &.item-2 {
+          grid-area: 6 / 2 / 7 / 3;
+        }
+        &.item-3 {
+          grid-area: 2 / 3 / 6 / 4;
+        }
+      }
+
+      .seven {
+        visibility: hidden;
+        background: $color;
+
+        &.item-1 {
+          grid-area: 2 / 1 / 3 / 3;
+        }
+        &.item-2 {
+          grid-area: 3 / 3 / 8 / 4;
+        }
+      }
+
+      .eight {
+        visibility: hidden;
+        background: $color;
+
+        &.item-1 {
+          grid-area: 2 / 1 / 7 / 2;
+        }
+        &.item-2 {
+          grid-area: 4 / 2 / 5 / 3;
+        }
+        &.item-3 {
+          grid-area: 2 / 3 / 7 / 4;
+        }
+      }
+
+      .nine {
+        visibility: hidden;
+        background: $color;
+
+        &.item-1 {
+          grid-area: 2 / 2 / 3 / 3;
+        }
+        &.item-2 {
+          grid-area: 3 / 1 / 7 / 2;
+        }
+        &.item-3 {
+          grid-area: 3 / 3 / 8 / 4;
+        }
+      }
     }
 
-    /* number index 1 */
-    .number-1.item.index-1 {
-      grid-area: 3 / 2 / span 1 / span 2;
-    }
-    .number-1.item.index-2 {
-      grid-area: 4 / 4 / span 4 / span 1;
-    }
-    
-    /* number index 2 */
-    .number-2.item.index-1 {
-      grid-area: 3 / 6 / span 1 / span 2;
-    }
-    .number-2.item.index-2 {
-      grid-area: 4 / 8 / span 3 / span 1;
-    }
-    .number-2.item.index-3 {
-      grid-area: 7 / 6 / span 1 / span 2;
-    }
-    
-    /* colon */
-    .colon.item.index-1 {
-      grid-area: 3 / 10 / span 1 / span 1;
-    }
-    .colon.item.index-2 {
-      grid-area: 3 / 12 / span 1 / span 1;
-    }
-    .colon.item.index-3 {
-      grid-area: 7 / 10 / span 1 / span 1;
-    }
-    .colon.item.index-4 {
-      grid-area: 7 / 12 / span 1 / span 1;
-    }
-    
-    /* number index 3 */
-    .number-3.item.index-1 {
-      grid-area: 3 / 14 / span 1 / span 2;
-    }
-    .number-3.item.index-2 {
-      grid-area: 5 / 14 / span 1 / span 2;
-    }
-    .number-3.item.index-3 {
-      grid-area: 7 / 14 / span 1 / span 2;
-    }
-    .number-3.item.index-4 {
-      grid-area: 4 / 16 / span 3 / span 1;
-    }
-
-    /* number index 4 */
-    .number-4.item.index-1 {
-      grid-area: 3 / 18 / span 4 / span 1;
-    }
-    .number-4.item.index-2 {
-      grid-area: 7 / 19 / span 1 / span 1;
-    }
-    .number-4.item.index-3 {
-      grid-area: 8 / 20 / span 1 / span 1;
+    .colon {
+      grid-area: 3 / 6 / span 1 / span 1;
+      display: grid;
+      grid-template-columns: $small auto $small;
+      grid-template-rows: $small auto $small;
+      
+      .item-1 {
+        background: $color;
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      .item-2 {
+        background: $color;
+        grid-area: 1 / 3 / 2 / 4;
+      }
+      .item-3 {
+        background: $color;
+        grid-area: 3 / 1 / 4 / 2;
+      }
+      .item-4 {
+        background: $color;
+        grid-area: 3 / 3 / 4 / 4;
+      }
     }
   }
 }
