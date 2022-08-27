@@ -31,149 +31,149 @@ main.main section.container .number {
   grid-template-columns: 2em 6em 2em;
   grid-template-rows: 4em repeat(5, 2em) 4em;
 }
-main.main section.container .number.index-1 {
+main.main section.container .number.index-0 {
   grid-area: 2/2/span 4/span 1;
 }
-main.main section.container .number.index-2 {
+main.main section.container .number.index-1 {
   grid-area: 2/4/span 4/span 1;
 }
-main.main section.container .number.index-3 {
+main.main section.container .number.index-2 {
   grid-area: 2/8/span 4/span 1;
 }
-main.main section.container .number.index-4 {
+main.main section.container .number.index-3 {
   grid-area: 2/10/span 4/span 1;
 }
-main.main section.container .number .null {
-  visibility: visible;
-  background: blue;
-}
-main.main section.container .number .null.item-1 {
-  grid-area: 2/2/3/3;
-}
-main.main section.container .number .null.item-2 {
-  grid-area: 3/1/6/2;
-}
-main.main section.container .number .null.item-3 {
-  grid-area: 3/3/6/4;
-}
-main.main section.container .number .null.item-4 {
-  grid-area: 6/2/7/3;
-}
-main.main section.container .number .one {
+main.main section.container .number ._0 {
   visibility: hidden;
   background: blue;
 }
-main.main section.container .number .one.item-1 {
+main.main section.container .number ._0.item-1 {
+  grid-area: 2/2/3/3;
+}
+main.main section.container .number ._0.item-2 {
+  grid-area: 3/1/6/2;
+}
+main.main section.container .number ._0.item-3 {
+  grid-area: 3/3/6/4;
+}
+main.main section.container .number ._0.item-4 {
+  grid-area: 6/2/7/3;
+}
+main.main section.container .number ._1 {
+  visibility: hidden;
+  background: blue;
+}
+main.main section.container .number ._1.item-1 {
   grid-area: 2/1/3/3;
 }
-main.main section.container .number .one.item-2 {
+main.main section.container .number ._1.item-2 {
   grid-area: 3/3/7/4;
 }
-main.main section.container .number .two {
+main.main section.container .number ._2 {
   visibility: hidden;
   background: blue;
 }
-main.main section.container .number .two.item-1 {
+main.main section.container .number ._2.item-1 {
   grid-area: 2/1/3/3;
 }
-main.main section.container .number .two.item-2 {
+main.main section.container .number ._2.item-2 {
   grid-area: 3/3/6/4;
 }
-main.main section.container .number .two.item-3 {
+main.main section.container .number ._2.item-3 {
   grid-area: 6/1/7/3;
 }
-main.main section.container .number .three {
+main.main section.container .number ._3 {
   visibility: hidden;
   background: blue;
 }
-main.main section.container .number .three.item-1 {
+main.main section.container .number ._3.item-1 {
   grid-area: 2/1/3/3;
 }
-main.main section.container .number .three.item-2 {
+main.main section.container .number ._3.item-2 {
   grid-area: 4/1/5/3;
 }
-main.main section.container .number .three.item-3 {
+main.main section.container .number ._3.item-3 {
   grid-area: 6/1/7/3;
 }
-main.main section.container .number .three.item-4 {
+main.main section.container .number ._3.item-4 {
   grid-area: 3/3/6/4;
 }
-main.main section.container .number .four {
+main.main section.container .number ._4 {
   visibility: hidden;
   background: blue;
 }
-main.main section.container .number .four.item-1 {
+main.main section.container .number ._4.item-1 {
   grid-area: 2/1/6/2;
 }
-main.main section.container .number .four.item-2 {
+main.main section.container .number ._4.item-2 {
   grid-area: 6/2/7/3;
 }
-main.main section.container .number .four.item-3 {
+main.main section.container .number ._4.item-3 {
   grid-area: 7/3/8/4;
 }
-main.main section.container .number .five {
+main.main section.container .number ._5 {
   visibility: hidden;
   background: blue;
 }
-main.main section.container .number .five.item-1 {
+main.main section.container .number ._5.item-1 {
   grid-area: 2/2/3/4;
 }
-main.main section.container .number .five.item-2 {
+main.main section.container .number ._5.item-2 {
   grid-area: 3/1/6/2;
 }
-main.main section.container .number .five.item-3 {
+main.main section.container .number ._5.item-3 {
   grid-area: 6/2/7/3;
 }
-main.main section.container .number .five.item-4 {
+main.main section.container .number ._5.item-4 {
   grid-area: 7/3/8/4;
 }
-main.main section.container .number .six {
+main.main section.container .number ._6 {
   visibility: hidden;
   background: blue;
 }
-main.main section.container .number .six.item-1 {
+main.main section.container .number ._6.item-1 {
   grid-area: 1/1/6/2;
 }
-main.main section.container .number .six.item-2 {
+main.main section.container .number ._6.item-2 {
   grid-area: 6/2/7/3;
 }
-main.main section.container .number .six.item-3 {
+main.main section.container .number ._6.item-3 {
   grid-area: 2/3/6/4;
 }
-main.main section.container .number .seven {
+main.main section.container .number ._7 {
   visibility: hidden;
   background: blue;
 }
-main.main section.container .number .seven.item-1 {
+main.main section.container .number ._7.item-1 {
   grid-area: 2/1/3/3;
 }
-main.main section.container .number .seven.item-2 {
+main.main section.container .number ._7.item-2 {
   grid-area: 3/3/8/4;
 }
-main.main section.container .number .eight {
+main.main section.container .number ._8 {
   visibility: hidden;
   background: blue;
 }
-main.main section.container .number .eight.item-1 {
+main.main section.container .number ._8.item-1 {
   grid-area: 2/1/7/2;
 }
-main.main section.container .number .eight.item-2 {
+main.main section.container .number ._8.item-2 {
   grid-area: 4/2/5/3;
 }
-main.main section.container .number .eight.item-3 {
+main.main section.container .number ._8.item-3 {
   grid-area: 2/3/7/4;
 }
-main.main section.container .number .nine {
+main.main section.container .number ._9 {
   visibility: hidden;
   background: blue;
 }
-main.main section.container .number .nine.item-1 {
+main.main section.container .number ._9.item-1 {
   grid-area: 2/2/3/3;
 }
-main.main section.container .number .nine.item-2 {
+main.main section.container .number ._9.item-2 {
   grid-area: 3/1/7/2;
 }
-main.main section.container .number .nine.item-3 {
+main.main section.container .number ._9.item-3 {
   grid-area: 3/3/8/4;
 }
 main.main section.container .colon {

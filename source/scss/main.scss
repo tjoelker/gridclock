@@ -36,21 +36,21 @@ main.main {
       grid-template-columns: $small $large $small;
       grid-template-rows: $medium repeat(5, $small) $medium;  
 
-      &.index-1 {
+      &.index-0 {
         grid-area: 2 / 2 / span 4 / span 1;
       }
-      &.index-2 {
+      &.index-1 {
         grid-area: 2 / 4 / span 4 / span 1;
       }
-      &.index-3 {
+      &.index-2 {
         grid-area: 2 / 8 / span 4 / span 1;
       }
-      &.index-4 {
+      &.index-3 {
         grid-area: 2 / 10 / span 4 / span 1;
       }
 
-      .null {
-        visibility: visible;
+      ._0 {
+        visibility: hidden;
         background: $color;
 
         &.item-1 {
@@ -67,7 +67,7 @@ main.main {
         }
       }
 
-      .one {
+      ._1 {
         visibility: hidden;
         background: $color;
 
@@ -79,7 +79,7 @@ main.main {
         }
       }
 
-      .two {
+      ._2 {
         visibility: hidden;
         background: $color;
 
@@ -94,7 +94,7 @@ main.main {
         }
       }
 
-      .three {
+      ._3 {
         visibility: hidden;
         background: $color;
 
@@ -112,7 +112,7 @@ main.main {
         }
       }
 
-      .four {
+      ._4 {
         visibility: hidden;
         background: $color;
 
@@ -127,7 +127,7 @@ main.main {
         }
       }
 
-      .five {
+      ._5 {
         visibility: hidden;
         background: $color;
 
@@ -145,7 +145,7 @@ main.main {
         }
       }
 
-      .six {
+      ._6 {
         visibility: hidden;
         background: $color;
 
@@ -160,7 +160,7 @@ main.main {
         }
       }
 
-      .seven {
+      ._7 {
         visibility: hidden;
         background: $color;
 
@@ -172,7 +172,7 @@ main.main {
         }
       }
 
-      .eight {
+      ._8 {
         visibility: hidden;
         background: $color;
 
@@ -187,7 +187,7 @@ main.main {
         }
       }
 
-      .nine {
+      ._9 {
         visibility: hidden;
         background: $color;
 

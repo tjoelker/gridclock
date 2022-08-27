@@ -1,75 +1,85 @@
 'use strict';
 
-function _createForOfIteratorHelper(r, t) {
-  var e, n, o, a, u = 'undefined' != typeof Symbol && r[Symbol.iterator] || r['@@iterator'];
-  if (u) return n = !(e = !0), {
+function _createForOfIteratorHelper(e, t) {
+  var r, n, o, i, a = 'undefined' != typeof Symbol && e[Symbol.iterator] || e['@@iterator'];
+  if (a) return n = !(r = !0), {
     s: function() {
-      u = u.call(r);
+      a = a.call(e);
     },
     n: function() {
-      var r = u.next();
-      return e = r.done, r;
+      var e = a.next();
+      return r = e.done, e;
     },
-    e: function(r) {
-      n = !0, o = r;
+    e: function(e) {
+      n = !0, o = e;
     },
     f: function() {
       try {
-        e || null == u.return || u.return();
+        r || null == a.return || a.return();
       } finally {
         if (n) throw o;
       }
     }
   };
-  if (Array.isArray(r) || (u = _unsupportedIterableToArray(r)) || t && r && 'number' == typeof r.length) return u && (r = u), 
-  a = 0, {
+  if (Array.isArray(e) || (a = _unsupportedIterableToArray(e)) || t && e && 'number' == typeof e.length) return a && (e = a), 
+  i = 0, {
     s: t = function() {},
     n: function() {
-      return a >= r.length ? {
+      return i >= e.length ? {
         done: !0
       } : {
         done: !1,
-        value: r[a++]
+        value: e[i++]
       };
     },
-    e: function(r) {
-      throw r;
+    e: function(e) {
+      throw e;
     },
     f: t
   };
   throw new TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
 
-function _unsupportedIterableToArray(r, t) {
-  var e;
-  if (r) return 'string' == typeof r ? _arrayLikeToArray(r, t) : 'Map' === (e = 'Object' === (e = Object.prototype.toString.call(r).slice(8, -1)) && r.constructor ? r.constructor.name : e) || 'Set' === e ? Array.from(r) : 'Arguments' === e || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e) ? _arrayLikeToArray(r, t) : void 0;
+function _unsupportedIterableToArray(e, t) {
+  var r;
+  if (e) return 'string' == typeof e ? _arrayLikeToArray(e, t) : 'Map' === (r = 'Object' === (r = Object.prototype.toString.call(e).slice(8, -1)) && e.constructor ? e.constructor.name : r) || 'Set' === r ? Array.from(e) : 'Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r) ? _arrayLikeToArray(e, t) : void 0;
 }
 
-function _arrayLikeToArray(r, t) {
-  (null == t || t > r.length) && (t = r.length);
-  for (var e = 0, n = new Array(t); e < t; e++) n[e] = r[e];
+function _arrayLikeToArray(e, t) {
+  (null == t || t > e.length) && (t = e.length);
+  for (var r = 0, n = new Array(t); r < t; r++) n[r] = e[r];
   return n;
 }
 
-var data = new Date(), hours = data.getHours(), minutes = data.getMinutes();
+var data = new Date(), time = [], hours = data.getHours(), minutes = data.getMinutes(), seconds = data.getSeconds(), element = function(e) {
+  return document.getElementsByClassName('_'.concat(e));
+};
 
-function logCurrentTime() {
-  for (var r = [], t = arguments.length, e = new Array(t), n = 0; n < t; n++) e[n] = arguments[n];
-  if (2 != e.length) return console.log('ERROR');
-  var o, a = _createForOfIteratorHelper(e);
+function getCurrentTime() {
+  time.splice(0, time.length);
+  for (var e = arguments.length, t = new Array(e), r = 0; r < e; r++) t[r] = arguments[r];
+  if (2 != t.length) return console.log('ERROR');
+  var n, o = _createForOfIteratorHelper(t);
   try {
-    for (a.s(); !(o = a.n()).done; ) {
-      var u = ((u = o.value) < 10 ? '0' : '').concat(u);
-      r.push(u);
+    for (o.s(); !(n = o.n()).done; ) {
+      var i = ((i = n.value) < 10 ? '0' : '').concat(i);
+      time.push(i);
     }
-  } catch (r) {
-    a.e(r);
+  } catch (e) {
+    o.e(e);
   } finally {
-    a.f();
+    o.f();
   }
-  return console.log(r[0] + ':' + r[1]);
+  return updateCurrentTime(time.join(''));
 }
 
-setInterval(function() {
-  return logCurrentTime(hours, minutes);
-}, 1e3);
+function updateCurrentTime(e) {
+  for (var t = 0; t < e.length; t++) setVisibility(t, e[t]);
+}
+
+function setVisibility(e, t) {
+  var r = element(t), t = element(t);
+  r.style.visibility = 'hidden', t.style.visibility = 'visible';
+}
+
+getCurrentTime(hours, minutes);
